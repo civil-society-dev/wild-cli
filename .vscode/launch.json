@@ -1,0 +1,51 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Wild CLI - Help",
+            "type": "go",
+            "request": "launch",
+            "mode": "auto",
+            "program": "${workspaceFolder}/main.go",
+            "args": ["help"],
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Wild CLI - Version",
+            "type": "go",
+            "request": "launch",
+            "mode": "auto",
+            "program": "${workspaceFolder}/main.go",
+            "args": ["version"],
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Wild Daemon/UI",
+            "type": "go",
+            "request": "launch",
+            "mode": "auto",
+            "program": "${workspaceFolder}/main.go",
+            "args": ["--ui"],
+            "console": "integratedTerminal",
+            "env": {},
+            "presentation": {
+                "group": "daemon",
+                "order": 1
+            }
+        },
+        {
+            "name": "Debug Wild Daemon/UI",
+            "type": "go",
+            "request": "launch",
+            "mode": "debug",
+            "program": "${workspaceFolder}/main.go",
+            "args": ["--ui"],
+            "console": "integratedTerminal",
+            "stopOnEntry": false,
+            "presentation": {
+                "group": "daemon",
+                "order": 2
+            }
+        }
+    ]
+}
