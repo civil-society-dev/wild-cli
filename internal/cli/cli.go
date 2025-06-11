@@ -15,6 +15,8 @@ func Run(args []string) error {
 		showHelp()
 	case "version":
 		showVersion()
+	case "init":
+		return runInit(args[1:])
 	default:
 		return fmt.Errorf("unknown command: %s", command)
 	}
@@ -32,6 +34,7 @@ func showHelp() {
 	fmt.Println("Available Commands:")
 	fmt.Println("  help         Show this help message")
 	fmt.Println("  version      Show version information")
+	fmt.Println("  init         Initialize Wild-Cloud project")
 }
 
 func showVersion() {
